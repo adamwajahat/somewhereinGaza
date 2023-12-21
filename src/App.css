@@ -9,3 +9,29 @@
   align-items: center;
   height: 100%;
 }
+
+.information {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+}
+
+.information div {
+  width: 70%;
+  max-width: 500px;
+}
+
+.signature {
+  text-align: right;
+  width: 100% !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+.gitHubInfo {
+  margin-bottom: 2em;
+}
