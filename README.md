@@ -1,5 +1,5 @@
-#somewhere in Gaza (2023)
-##Adam Wajahat
+# somewhere in Gaza (2023)
+## Adam Wajahat
 React component with Google Street View photo spheres and photo paths
 
 
