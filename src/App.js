@@ -458,7 +458,7 @@ function App() {
   return (
     <div className="App">
       {captchaView && (<div className='wrapper'>
-        <DeCAPTCHA objOfQuizzes={myArrayOfObjects} infoLink='https://www.google.com/' audioLink={audioTest} onCaptchaCorrect={onCorrect}/>
+        <DeCAPTCHA objOfQuizzes={myArrayOfObjects} infoLink='https://adamwajahat.github.io/' audioLink={audioTest} onCaptchaCorrect={onCorrect}/>
       </div>)}
       {infoView && (<div className='information'>
         <div className='generalInfo'>
@@ -623,7 +623,11 @@ function App() {
             A parameterized clone of Google reCAPTCHA's v2 bot protection as a React component. Developed specifically for <i>somewhere in Gaza</i> (2023). Source code can be found <a href='https://github.com/adamwajahat/deCAPTCHA'>here</a>.
           </body>
         </div>
-
+        <div className='tryAgain'>
+          <h2>
+            To try again, please refresh this page.
+          </h2>
+        </div>
       </div>)}
     </div>
   );
