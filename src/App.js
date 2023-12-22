@@ -278,6 +278,7 @@ import set26Img8 from './assets/imgs/DeCaptcha/prayerrug_square2.png'
 
 // audio file for captcha audio
 import audioTest from './assets/audio_test.mp3'
+import { Helmet } from 'react-helmet';
 
 function App() {
   const [captchaView, setCaptchaView] = useState(true);
@@ -457,6 +458,12 @@ function App() {
 
   return (
     <div className="App">
+      <Helmet>
+        <meta charSet='utf-8'/>
+        <title>somewhere in Gaza</title>
+        <link rel='canonical' href='https://somewhereingaza.github.io/' />
+        <meta name='description' content='A net-art project by Adam Wajahat'/>
+      </Helmet>
       {captchaView && (<div className='wrapper'>
         <DeCAPTCHA objOfQuizzes={myArrayOfObjects} infoLink='https://adamwajahat.github.io/' audioLink={audioTest} onCaptchaCorrect={onCorrect}/>
       </div>)}
