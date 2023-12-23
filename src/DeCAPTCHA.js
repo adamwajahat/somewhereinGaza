@@ -8,7 +8,9 @@ function DeCAPTCHA({objOfQuizzes, audioLink, infoLink, onCaptchaCorrect}) {
   const [captchaIndex, setCaptchaIndex] = useState(0);
   const [clickedImgDiv, setClickedImgDiv] = useState([]);
   const [showIncorrectDivStyle, setShowIncorrectDivStyle] = useState({display: 'none'});
-  const [showIncorrectCaptchaHeight, setShowIncorrectCaptchaHeight] = useState({height: '580px'})
+  const isMobile = window.innerWidth <= 410 ? true : false
+  const initialHeight = isMobile ? '520px' : '580px;'
+  const [showIncorrectCaptchaHeight, setShowIncorrectCaptchaHeight] = useState({height: initialHeight})
   const [showIncorrectText, setShowIncorrectText] = useState(false);
   const objOfQuizzesLength = objOfQuizzes.length
   const [captchasLeft, setCaptchasLeft] = useState(Array.from({ length: objOfQuizzesLength }, (_, index) => index))
@@ -84,10 +86,19 @@ function DeCAPTCHA({objOfQuizzes, audioLink, infoLink, onCaptchaCorrect}) {
     const isImgClicked = clickedImgDiv.includes(id);
 
     if(isImgClicked) {
-      return {
-        margin: '12px',
-        height: '106px',
-        width: '106px',
+      if(isMobile){
+        return {
+          margin: '7px',
+          height: '95px',
+          width: '95px',
+        }
+      }
+      else{
+        return {
+          margin: '12px',
+          height: '106px',
+          width: '106px',
+        }
       }
     }
   }
@@ -96,12 +107,22 @@ function DeCAPTCHA({objOfQuizzes, audioLink, infoLink, onCaptchaCorrect}) {
     if(yes){
       setShowIncorrectText(true);
       setShowIncorrectDivStyle({display: 'block'})
-      setShowIncorrectCaptchaHeight({height: '610px'})
+      if(isMobile){
+        setShowIncorrectCaptchaHeight({height: '550px'})
+      }
+      else{
+        setShowIncorrectCaptchaHeight({height: '610px'})
+      }
     }
     else{
       setShowIncorrectText(false);
       setShowIncorrectDivStyle({display: 'none'})
-      setShowIncorrectCaptchaHeight({height: '580px'})
+      if(isMobile){
+        setShowIncorrectCaptchaHeight({height: '520px'})
+      }
+      else{
+        setShowIncorrectCaptchaHeight({height: '580px'})
+      }
     }
   }
 

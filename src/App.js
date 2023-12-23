@@ -278,6 +278,7 @@ import set26Img8 from './assets/imgs/DeCaptcha/prayerrug_square2.png'
 
 // audio file for captcha audio
 import audioTest from './assets/audio_test.mp3'
+import { Helmet } from 'react-helmet';
 
 function App() {
   const [captchaView, setCaptchaView] = useState(true);
@@ -457,8 +458,14 @@ function App() {
 
   return (
     <div className="App">
+      <Helmet>
+        <meta charSet='utf-8'/>
+        <title>somewhere in Gaza</title>
+        <link rel='canonical' href='https://somewhereingaza.github.io/' />
+        <meta name='description' content='A net-art project by Adam Wajahat'/>
+      </Helmet>
       {captchaView && (<div className='wrapper'>
-        <DeCAPTCHA objOfQuizzes={myArrayOfObjects} infoLink='https://adamwajahat.github.io/' audioLink={audioTest} onCaptchaCorrect={onCorrect}/>
+        <DeCAPTCHA objOfQuizzes={myArrayOfObjects} infoLink='https://github.com/adamwajahat/deCAPTCHA' audioLink={audioTest} onCaptchaCorrect={onCorrect}/>
       </div>)}
       {infoView && (<div className='information'>
         <div className='generalInfo'>
@@ -466,11 +473,17 @@ function App() {
             somewhere in Gaza
           </h1>
           <body>
-            "As I cut each of the captures into 9 squares in GIMP, I thought how much of these places that are now on my screen are left"
+            "As I cut each of the captures into 9 squares..., I thought how much of these places that are now on my screen are left"
           </body>
           <div className='signature'>
             -<a href='https://adamwajahat.github.io/'>Adam Wajahat</a>
           </div>
+          <br></br>
+          <br></br>
+          <body>
+            To view the art piece again, please refresh the screen.
+          </body>
+          <br></br>
         </div>
         <div className='locationInfo'>
           <h2>
@@ -622,11 +635,6 @@ function App() {
           <body>
             A parameterized clone of Google reCAPTCHA's v2 bot protection as a React component. Developed specifically for <i>somewhere in Gaza</i> (2023). Source code can be found <a href='https://github.com/adamwajahat/deCAPTCHA'>here</a>.
           </body>
-        </div>
-        <div className='tryAgain'>
-          <h2>
-            To try again, please refresh this page.
-          </h2>
         </div>
       </div>)}
     </div>

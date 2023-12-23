@@ -113,3 +113,27 @@ a, p{
     padding: 7px 0;
     grid-row: 3;
 }
+
+@media only screen and (max-width: 410px) {
+    #decaptcha-grid-container {
+        height: 520px;
+        width: 350px;
+        grid-template-rows: 119px auto auto 60px;
+    }
+
+    #decaptcha-row1 {
+        width: 288px;
+        height: 58px;
+    }
+
+    #decaptcha-row2 {
+        height: 341px;
+        grid-template-rows: 109px 109px 109px;
+        grid-template-columns: 109px 109px 109px;
+    }
+
+    .decaptcha-img {
+        height: 109px;
+        width: 109px;
+    }
+}
