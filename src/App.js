@@ -463,6 +463,7 @@ function App() {
         <title>somewhere in Gaza</title>
         <link rel='canonical' href='https://somewhereingaza.github.io/' />
         <meta name='description' content='A net-art project by Adam Wajahat'/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"></meta>
       </Helmet>
       {captchaView && (<div className='wrapper'>
         <DeCAPTCHA objOfQuizzes={myArrayOfObjects} infoLink='https://github.com/adamwajahat/deCAPTCHA' audioLink={audioTest} onCaptchaCorrect={onCorrect}/>
