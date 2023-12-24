@@ -466,7 +466,7 @@ function App() {
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"></meta>
         <meta name="theme-color" content="#FFFFFF"></meta>
         <meta name="msapplication-navbutton-color" content="#FFFFFF"></meta>
-        <meta name="apple-mobile-web-app-status-bar-style" content="#FFFFFF"></meta>
+        <meta name="apple-mobile-web-app-status-bar-style" content="default"></meta>
       </Helmet>
       {captchaView && (<div className='wrapper'>
         <DeCAPTCHA objOfQuizzes={myArrayOfObjects} infoLink='https://github.com/adamwajahat/deCAPTCHA' audioLink={audioTest} onCaptchaCorrect={onCorrect}/>
